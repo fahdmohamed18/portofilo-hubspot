@@ -1,0 +1,172 @@
+[
+  {
+    "id": "section_title",
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "default": "Featured Projects"
+  },
+  {
+    "id": "section_subtitle",
+    "name": "section_subtitle",
+    "label": "Section Subtitle",
+    "type": "text",
+    "default": "A showcase of my recent work and personal projects"
+  },
+  {
+    "id": "projects",
+    "name": "projects",
+    "label": "Projects",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 10,
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "title",
+        "name": "title",
+        "label": "Project Title",
+        "type": "text",
+        "default": "Project Name"
+      },
+      {
+        "id": "type",
+        "name": "type",
+        "label": "Project Type",
+        "type": "text",
+        "default": "Full Stack"
+      },
+      {
+        "id": "featured",
+        "name": "featured",
+        "label": "Featured Project",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "id": "description",
+        "name": "description",
+        "label": "Short Description",
+        "type": "text",
+        "default": "Project description goes here..."
+      },
+      {
+        "id": "image",
+        "name": "image",
+        "label": "Project Screenshot",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": "Project screenshot"
+        }
+      },
+      {
+        "id": "tech_stack",
+        "name": "tech_stack",
+        "label": "Technologies Used",
+        "type": "group",
+        "occurrence": {
+          "min": 1,
+          "max": 6,
+          "default": 3
+        },
+        "children": [
+          {
+            "id": "tech_name",
+            "name": "tech_name",
+            "label": "Technology",
+            "type": "text",
+            "default": ".NET Core"
+          }
+        ]
+      },
+      {
+        "id": "demo_url",
+        "name": "demo_url",
+        "label": "Live Demo URL",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "id": "github_url",
+        "name": "github_url",
+        "label": "GitHub Repository URL",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "title": "FreshCart E-Commerce",
+        "type": "Full Stack",
+        "featured": true,
+        "description": "A complete e-commerce platform with product management, shopping cart, checkout process, and order management built with ASP.NET Core and Angular.",
+        "tech_stack": [
+          { "tech_name": "ASP.NET Core" },
+          { "tech_name": "Angular" },
+          { "tech_name": "SQL Server" },
+          { "tech_name": "REST API" }
+        ],
+        "demo_url": "",
+        "github_url": ""
+      },
+      {
+        "title": "Sociala - Social Network",
+        "type": "Full Stack",
+        "featured": true,
+        "description": "A social networking application with user profiles, posts, comments, likes, and real-time notifications. Features authentication and authorization.",
+        "tech_stack": [
+          { "tech_name": "ASP.NET Core" },
+          { "tech_name": "Entity Framework" },
+          { "tech_name": "SQL Server" },
+          { "tech_name": "SignalR" }
+        ],
+        "demo_url": "",
+        "github_url": ""
+      },
+      {
+        "title": "DEPI E-Commerce Platform",
+        "type": "Backend",
+        "featured": false,
+        "description": "Built for Digital Egypt Initiative - a clothing brand e-commerce system with product browsing, order management, and customer reviews.",
+        "tech_stack": [
+          { "tech_name": "ASP.NET Core" },
+          { "tech_name": "Entity Framework" },
+          { "tech_name": "SQL Server" }
+        ],
+        "demo_url": "",
+        "github_url": ""
+      },
+      {
+        "title": "Power BI Dashboards",
+        "type": "Data Analytics",
+        "featured": false,
+        "description": "Interactive business intelligence dashboards for revenue analysis, booking insights, and performance monitoring using Power BI and KNIME.",
+        "tech_stack": [
+          { "tech_name": "Power BI" },
+          { "tech_name": "KNIME" },
+          { "tech_name": "SQL" },
+          { "tech_name": "DAX" }
+        ],
+        "demo_url": "",
+        "github_url": ""
+      }
+    ]
+  },
+  {
+    "id": "show_more_link",
+    "name": "show_more_link",
+    "label": "Show 'View All' Button",
+    "type": "boolean",
+    "default": true
+  },
+  {
+    "id": "more_link",
+    "name": "more_link",
+    "label": "GitHub Profile URL",
+    "type": "text",
+    "default": "https://github.com"
+  }
+]

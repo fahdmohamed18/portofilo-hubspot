@@ -1,0 +1,82 @@
+<section class="skills-section" id="skills">
+  <div class="skills-background">
+    <div class="skills-pattern"></div>
+  </div>
+  
+  <div class="skills-container">
+    <div class="section-header">
+      <span class="section-tag">&lt;skills /&gt;</span>
+      {% if module.section_title %}
+        <h2 class="section-title">{{ module.section_title }}</h2>
+      {% endif %}
+      {% if module.section_subtitle %}
+        <p class="section-subtitle">{{ module.section_subtitle }}</p>
+      {% endif %}
+    </div>
+    
+    <div class="skills-content">
+      {% for category in module.skill_categories %}
+        <div class="skill-category">
+          <div class="category-header">
+            <div class="category-icon">
+              {% if category.icon == "backend" %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              {% elif category.icon == "frontend" %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+                  <line x1="12" y1="22" x2="12" y2="15.5"/>
+                  <polyline points="22 8.5 12 15.5 2 8.5"/>
+                </svg>
+              {% elif category.icon == "database" %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                </svg>
+              {% elif category.icon == "tools" %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              {% else %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              {% endif %}
+            </div>
+            <h3 class="category-title">{{ category.title }}</h3>
+          </div>
+          
+          <div class="skills-list">
+            {% for skill in category.skills %}
+              <div class="skill-item">
+                <span class="skill-name">{{ skill.skill_name }}</span>
+                {% if skill.level %}
+                  <div class="skill-level">
+                    <div class="skill-progress" style="width: {{ skill.level }}"></div>
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    {% if module.show_experience %}
+      <div class="experience-stats">
+        {% for stat in module.stats %}
+          <div class="stat-item">
+            <span class="stat-number">{{ stat.number }}</span>
+            <span class="stat-label">{{ stat.stat_label }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>

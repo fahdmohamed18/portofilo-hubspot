@@ -1,0 +1,433 @@
+/* ============================================
+   Fahd Mohamed - .NET Backend Developer Portfolio
+   Modern Dark Theme with Blue/Green Accents
+   ============================================ */
+
+/* Global CSS Variables */
+:root {
+  /* Primary Colors - .NET Inspired */
+  --primary-color: #512bd4;      /* .NET Purple */
+  --secondary-color: #0d6efd;    /* Modern Blue */
+  --accent-color: #00d4aa;       /* Tech Green */
+  --accent-gradient: linear-gradient(135deg, #512bd4 0%, #0d6efd 50%, #00d4aa 100%);
+  
+  /* Dark Theme Colors */
+  --dark-bg: #0a0a0f;
+  --dark-secondary: #12121a;
+  --dark-card: #1a1a25;
+  --dark-border: #2a2a3a;
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b0;
+  --text-muted: #6c6c7c;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px rgba(81, 43, 212, 0.3);
+  --shadow-accent: 0 0 20px rgba(0, 212, 170, 0.2);
+  
+  /* Other */
+  --border-radius: 12px;
+  --border-radius-lg: 20px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background-color: var(--dark-bg);
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gradient {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Spacing Utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: var(--transition-slow);
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: var(--accent-gradient);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(81, 43, 212, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-color);
+  color: var(--dark-bg);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--dark-border);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Card Base Styles */
+.card {
+  background: var(--dark-card);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--dark-border);
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-5px);
+}
+
+/* Section Styling */
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  margin-bottom: 16px;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Decorative Elements */
+.decorative-line {
+  width: 60px;
+  height: 4px;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+  margin: 0 auto 20px;
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Background Patterns */
+.bg-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.03;
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--primary-color) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, var(--accent-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+  
+  .grid {
+    gap: 1.5rem;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* HubSpot Overrides */
+.portfolio-main-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.body-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--accent-gradient);
+  color: var(--text-primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 1000;
+  border: none;
+  font-size: 20px;
+  box-shadow: var(--shadow-glow);
+}
+
+#scrollToTop.visible {
+  opacity: 1;
+}
+
+#scrollToTop:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* Code-like Styling */
+.code-tag {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  background: var(--dark-secondary);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  border: 1px solid var(--dark-border);
+}
+
+/* Tech Badge */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--dark-secondary);
+  border: 1px solid var(--dark-border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.tech-badge:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Selection Color */
+::selection {
+  background: var(--primary-color);
+  color: var(--text-primary);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}

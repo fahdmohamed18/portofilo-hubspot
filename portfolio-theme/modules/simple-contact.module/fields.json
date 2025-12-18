@@ -1,0 +1,96 @@
+[
+  {
+    "id": "section_title",
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "default": "Get In Touch"
+  },
+  {
+    "id": "section_subtitle",
+    "name": "section_subtitle",
+    "label": "Section Subtitle",
+    "type": "text",
+    "default": "I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
+  },
+  {
+    "id": "full_name",
+    "name": "full_name",
+    "label": "Your Name (for footer)",
+    "type": "text",
+    "default": "Fahd Mohamed"
+  },
+  {
+    "id": "email",
+    "name": "email",
+    "label": "Email Address",
+    "type": "text",
+    "default": "fm1823@fayoum.edu.eg"
+  },
+  {
+    "id": "location",
+    "name": "location",
+    "label": "Location",
+    "type": "text",
+    "default": "Fayoum, Egypt"
+  },
+  {
+    "id": "current_status",
+    "name": "current_status",
+    "label": "Current Status",
+    "type": "text",
+    "default": "Open to opportunities"
+  },
+  {
+    "id": "connect_message",
+    "name": "connect_message",
+    "label": "Connect Message",
+    "type": "text",
+    "default": "Feel free to reach out for collaborations, job opportunities, or just a friendly hello!"
+  },
+  {
+    "id": "cta_email",
+    "name": "cta_email",
+    "label": "Show Email CTA Button",
+    "type": "boolean",
+    "default": true
+  },
+  {
+    "id": "social_links",
+    "name": "social_links",
+    "label": "Social Media Links",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 5,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "platform",
+        "name": "platform",
+        "label": "Platform Name",
+        "type": "choice",
+        "choices": [
+          ["GitHub", "GitHub"],
+          ["LinkedIn", "LinkedIn"],
+          ["Twitter", "Twitter"],
+          ["Other", "Other"]
+        ],
+        "default": "GitHub"
+      },
+      {
+        "id": "url",
+        "name": "url",
+        "label": "Profile URL",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      { "platform": "GitHub", "url": "" },
+      { "platform": "LinkedIn", "url": "" },
+      { "platform": "Twitter", "url": "" }
+    ]
+  }
+]

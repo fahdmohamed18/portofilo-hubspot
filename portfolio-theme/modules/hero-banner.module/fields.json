@@ -1,0 +1,139 @@
+[
+  {
+    "id": "name_prefix",
+    "name": "name_prefix",
+    "label": "Name Prefix (e.g., I'm)",
+    "type": "text",
+    "default": "I'm"
+  },
+  {
+    "id": "full_name",
+    "name": "full_name",
+    "label": "Your Name",
+    "type": "text",
+    "default": "Fahd Mohamed"
+  },
+  {
+    "id": "title",
+    "name": "title",
+    "label": "Your Title/Role",
+    "type": "text",
+    "default": ".NET Backend Developer"
+  },
+  {
+    "id": "bio",
+    "name": "bio",
+    "label": "Short Bio",
+    "type": "richtext",
+    "default": "<p>Computer Science student at Fayoum University passionate about building scalable backend systems and robust APIs using .NET Core and C#. Active member at GDSC and ALX Africa participant.</p>"
+  },
+  {
+    "id": "hero_image",
+    "name": "hero_image",
+    "label": "Profile Image",
+    "type": "image",
+    "default": {
+      "src": "../images/fahd.jpeg",
+      "alt": "Fahd Mohamed - .NET Developer"
+    }
+  },
+  {
+    "id": "tech_stack",
+    "name": "tech_stack",
+    "label": "Tech Stack Tags",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 8,
+      "default": 5
+    },
+    "children": [
+      {
+        "id": "tech_name",
+        "name": "tech_name",
+        "label": "Technology Name",
+        "type": "text",
+        "default": "C#"
+      }
+    ],
+    "default": [
+      { "tech_name": "C#" },
+      { "tech_name": ".NET Core" },
+      { "tech_name": "ASP.NET" },
+      { "tech_name": "SQL Server" },
+      { "tech_name": "Angular" }
+    ]
+  },
+  {
+    "id": "cta_primary",
+    "name": "cta_primary",
+    "label": "Primary Button Link",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "#projects",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false
+    }
+  },
+  {
+    "id": "cta_primary_text",
+    "name": "cta_primary_text",
+    "label": "Primary Button Text",
+    "type": "text",
+    "default": "View My Work"
+  },
+  {
+    "id": "cta_secondary",
+    "name": "cta_secondary",
+    "label": "Secondary Button Link",
+    "type": "link",
+    "default": {
+      "url": {
+        "href": "#contact",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false
+    }
+  },
+  {
+    "id": "cta_secondary_text",
+    "name": "cta_secondary_text",
+    "label": "Secondary Button Text",
+    "type": "text",
+    "default": "Contact Me"
+  },
+  {
+    "id": "social_links",
+    "name": "social_links",
+    "label": "Social Links",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 5,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "platform",
+        "name": "platform",
+        "label": "Platform Name",
+        "type": "text",
+        "default": "GitHub"
+      },
+      {
+        "id": "url",
+        "name": "url",
+        "label": "Profile URL",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      { "platform": "GitHub", "url": "https://github.com/fahdmohamed18" },
+      { "platform": "LinkedIn", "url": "" },
+      { "platform": "Email", "url": "mailto:fm1823@fayoum.edu.eg" }
+    ]
+  }
+]

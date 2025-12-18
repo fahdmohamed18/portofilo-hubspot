@@ -1,0 +1,158 @@
+[
+  {
+    "id": "section_title",
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "default": "Technical Skills"
+  },
+  {
+    "id": "section_subtitle",
+    "name": "section_subtitle",
+    "label": "Section Subtitle",
+    "type": "text",
+    "default": "Technologies and tools I use to bring ideas to life"
+  },
+  {
+    "id": "skill_categories",
+    "name": "skill_categories",
+    "label": "Skill Categories",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 4
+    },
+    "children": [
+      {
+        "id": "title",
+        "name": "title",
+        "label": "Category Title",
+        "type": "text",
+        "default": "Backend Development"
+      },
+      {
+        "id": "icon",
+        "name": "icon",
+        "label": "Icon Type",
+        "type": "choice",
+        "choices": [
+          ["backend", "Backend"],
+          ["frontend", "Frontend"],
+          ["database", "Database"],
+          ["tools", "Tools"],
+          ["other", "Other"]
+        ],
+        "default": "backend"
+      },
+      {
+        "id": "skills",
+        "name": "skills",
+        "label": "Skills",
+        "type": "group",
+        "occurrence": {
+          "min": 1,
+          "max": 8,
+          "default": 4
+        },
+        "children": [
+          {
+            "id": "skill_name",
+            "name": "skill_name",
+            "label": "Skill Name",
+            "type": "text",
+            "default": "C#"
+          },
+          {
+            "id": "level",
+            "name": "level",
+            "label": "Proficiency Level (%)",
+            "type": "number",
+            "default": 85
+          }
+        ]
+      }
+    ],
+    "default": [
+      {
+        "title": "Backend Development",
+        "icon": "backend",
+        "skills": [
+          { "skill_name": "C# / .NET Core", "level": 90 },
+          { "skill_name": "ASP.NET MVC / Web API", "level": 88 },
+          { "skill_name": "Entity Framework", "level": 85 },
+          { "skill_name": "REST APIs", "level": 90 }
+        ]
+      },
+      {
+        "title": "Frontend Development",
+        "icon": "frontend",
+        "skills": [
+          { "skill_name": "Angular", "level": 80 },
+          { "skill_name": "HTML5 / CSS3", "level": 85 },
+          { "skill_name": "JavaScript", "level": 78 },
+          { "skill_name": "AJAX", "level": 75 }
+        ]
+      },
+      {
+        "title": "Database & Data",
+        "icon": "database",
+        "skills": [
+          { "skill_name": "SQL Server", "level": 88 },
+          { "skill_name": "Database Design", "level": 85 },
+          { "skill_name": "Power BI", "level": 75 },
+          { "skill_name": "KNIME Analytics", "level": 70 }
+        ]
+      },
+      {
+        "title": "Tools & Others",
+        "icon": "tools",
+        "skills": [
+          { "skill_name": "Git & GitHub", "level": 85 },
+          { "skill_name": "OOP Principles", "level": 90 },
+          { "skill_name": "Data Structures", "level": 82 },
+          { "skill_name": "Problem Solving", "level": 88 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "show_experience",
+    "name": "show_experience",
+    "label": "Show Experience Stats",
+    "type": "boolean",
+    "default": true
+  },
+  {
+    "id": "stats",
+    "name": "stats",
+    "label": "Experience Statistics",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 4,
+      "default": 3
+    },
+    "children": [
+      {
+        "id": "number",
+        "name": "number",
+        "label": "Number/Value",
+        "type": "text",
+        "default": "5+"
+      },
+      {
+        "id": "stat_label",
+        "name": "stat_label",
+        "label": "Label",
+        "type": "text",
+        "default": "Projects Completed"
+      }
+    ],
+    "default": [
+      { "number": "5+", "stat_label": "Projects Completed" },
+      { "number": "2+", "stat_label": "Years Learning" },
+      { "number": "10+", "stat_label": "Technologies Used" }
+    ]
+  }
+]

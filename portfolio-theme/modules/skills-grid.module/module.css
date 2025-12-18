@@ -1,0 +1,198 @@
+.skills-section {
+  padding: 100px 24px;
+  position: relative;
+  background: var(--dark-secondary, #12121a);
+  overflow: hidden;
+}
+
+.skills-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.skills-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23512bd4' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9rem;
+  color: var(--accent-color, #00d4aa);
+  background: rgba(0, 212, 170, 0.1);
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary, #a0a0b0);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.skill-category {
+  background: var(--dark-card, #1a1a25);
+  border: 1px solid var(--dark-border, #2a2a3a);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  border-color: var(--primary-color, #512bd4);
+  box-shadow: 0 0 30px rgba(81, 43, 212, 0.15);
+  transform: translateY(-5px);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--dark-border, #2a2a3a);
+}
+
+.category-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary-color, #512bd4), var(--secondary-color, #0d6efd));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.category-icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #ffffff);
+  margin: 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-name {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #a0a0b0);
+  font-weight: 500;
+}
+
+.skill-level {
+  height: 6px;
+  background: var(--dark-border, #2a2a3a);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color, #512bd4), var(--accent-color, #00d4aa));
+  border-radius: 3px;
+  transition: width 1s ease-out;
+}
+
+.experience-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  background: var(--dark-card, #1a1a25);
+  border: 1px solid var(--dark-border, #2a2a3a);
+  border-radius: 20px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-color, #512bd4), var(--accent-color, #00d4aa));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #a0a0b0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 16px;
+  }
+  
+  .skills-content {
+    gap: 20px;
+  }
+  
+  .skill-category {
+    padding: 24px;
+  }
+  
+  .experience-stats {
+    padding: 30px 20px;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}
