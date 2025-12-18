@@ -431,4 +431,4 @@ hs --help
 
 For questions or support:
 - Create an issue on GitHub
-- Contact: [mohamedhisham2003.official@gmail.com]
+- Contact: [fahdelkholy2004@gmail.com]
